@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contact_forms",
+  "info": {
+    "singularName": "contact-form",
+    "pluralName": "contact-forms",
+    "displayName": "ContactForm"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "FirstName": {
+      "type": "string",
+      "required": true,
+      "maxLength": 50,
+      "minLength": 2,
+      "regex": "^[A-Za-zÀ-ÿ]+([ '-][A-Za-zÀ-ÿ]+)*$"
+    },
+    "LastName": {
+      "type": "string",
+      "regex": "^[A-Za-zÀ-ÿ]+([ '-][A-Za-zÀ-ÿ]+)*$",
+      "required": true,
+      "maxLength": 50,
+      "minLength": 2
+    },
+    "Phone": {
+      "type": "string",
+      "required": true,
+      "maxLength": 20,
+      "minLength": 7,
+      "regex": "^\\+?[0-9\\s\\-().]{7,20}$"
+    },
+    "Message": {
+      "type": "text",
+      "required": true,
+      "maxLength": 1000,
+      "minLength": 10
+    }
+  }
+}

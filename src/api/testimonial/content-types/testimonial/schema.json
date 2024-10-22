@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "testimonials",
+  "info": {
+    "singularName": "testimonial",
+    "pluralName": "testimonials",
+    "displayName": "Testimonial",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ClientName": {
+      "type": "string",
+      "required": true,
+      "maxLength": 50,
+      "minLength": 2,
+      "regex": "^[A-Za-zÀ-ÿ]+(?:[ .'-][A-Za-zÀ-ÿ]+)*$"
+    },
+    "ClientPosition": {
+      "type": "string",
+      "regex": "^[A-Za-zÀ-ÿ.]+(?:[ -][A-Za-zÀ-ÿ.]+)*$",
+      "required": false,
+      "maxLength": 100,
+      "minLength": 2
+    },
+    "ClientCompany": {
+      "type": "string",
+      "regex": "^[A-Za-z0-9À-ÿ.&\\s-]+$",
+      "required": false,
+      "maxLength": 100,
+      "minLength": 2
+    },
+    "TestimonialText": {
+      "type": "richtext",
+      "required": true,
+      "maxLength": 2000,
+      "minLength": 50
+    },
+    "ClientPhoto": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Rating": {
+      "type": "decimal",
+      "max": 5,
+      "min": 1
+    }
+  }
+}

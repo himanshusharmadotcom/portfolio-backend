@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "services",
+  "info": {
+    "singularName": "service",
+    "pluralName": "services",
+    "displayName": "Service",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ServiceText": {
+      "type": "richtext",
+      "required": true,
+      "maxLength": 1000,
+      "minLength": 10
+    },
+    "Services": {
+      "type": "string",
+      "required": true,
+      "regex": "^([A-Za-z0-9\\s-]+, ){4}[A-Za-z0-9\\s-]+$"
+    }
+  }
+}
